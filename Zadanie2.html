@@ -1,0 +1,44 @@
+<html>
+    <head>
+ <script language="JavaScript">
+function execute()
+{
+    var No=prompt("Podaj 𝑁o","");
+    var T=prompt("Podaj T:","");
+    var T_h=prompt("Podaj czas po jakim pozostanie połowa atomów:","");
+    var Lambda;
+    var Log_nat;
+    var Pot;
+    var E;
+    var N;
+    
+
+    Log_nat=Math.LN2;
+    Lambda=Log_nat/T_h;
+    Lambda=Lambda.toFixed(7);
+    Pot=-Lambda*T;
+    E=Math.E;
+    
+    E=Math.pow(E,Pot);
+    
+    N=No*E;
+    N=N.toFixed(7);
+    
+    
+    document.write("<div style=color:purple;font-size:40>𝑁𝑜="+No+"[Sztuk] <br></div>");
+    document.write("<div style=color:purple;font-size:40>T="+T+"[Lat] <br></div>");
+    document.write("<div style=color:purple;font-size:40>𝑇½="+T_h+"[Lat] <br></div>");
+    document.write("<div style=color:purple;font-size:40>λ="+Lambda+"[1/rok] <br></div>");
+    document.write("<div style=color:purple;font-size:40>N="+N+"[Sztuk] <br></div>");
+    
+    
+}
+
+ </script>
+ </head>
+ <body>
+    
+    <input type="button" onclick="execute()" value="Oblicz" />  
+    
+</body>
+</html>
